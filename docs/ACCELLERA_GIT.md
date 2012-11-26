@@ -2,33 +2,36 @@
 
 ### General idea
 
+Currently, the ASI groups (formerly OSCI) use GIT for revision control due to its superiority in handling distributed version control. In order to reduce risk of a single company managing a repository, a private ASI GitHub account was acquired as a central resource.
+
 In order to accomplish this, we have:
 
 a. Setup accounts on accellera.org, hostingmail.earthlink.net, and github.com.
-b. Accounts are setup for each GRP, where GRP is one of {lwg, vwg, tlm, or cci}.
+b. Accounts are setup for each *<span style="color:red">GROUP*, where *<span style="color:red">GROUP* is one of {lwg, vwg, tlm, or cci}.
 
 This results in updates from GitHub resulting in the following chain of events:
 
-1. GitHub posts message to GRP_git@accellera.org
-2. GRP_git@accellera.org forwards message to GRP@lists.accellera.org
-3. GRP@lists.accellera.org reflects to all distribution group members
-4. GRP_git@accellera.org ignores resent-from lists.accellera.org messages
+1. Somebody updates a file on GitHub or edits an Issue
+2. GitHub posts message to *<span style="color:red">GROUP*_git@accellera.org
+3. *<span style="color:red">GROUP*_git@accellera.org forwards message to *<span style="color:red">GROUP*@lists.accellera.org from "Somebody"" \<notifications@github.com>
+4. *<span style="color:red">GROUP*@lists.accellera.org reflects to all distribution group members
+5. *<span style="color:red">GROUP*_git@accellera.org ignores messages with header Resent-from: lists.accellera.org messages
 
 ### Steps to setup repository notifications
 
-1. Obtain an accellera.org e-mail account
+1. Obtain an accellera.org e-mail account on hostingmail.earthlink.net
    - E-mail to current coordinator [lynn@accellera.org](mailto:lynn@accellera.org)
-   - Record the *GROUP* e-mail address (typically *GROUP*_git@accellera.org) and password
+   - Record the *<span style="color:red">GROUP* e-mail address (typically *<span style="color:red">GROUP*_git@accellera.org) and password
 2. Create a github account corresponding to the e-mail account
    - Go to [GitHub](http://www.github.com)
    - Sign-out if necessary (click door icon at upper-right)
    - Click **Sign up for free**
-   - Enter *Username* **GROUPgit**
+   - Enter *Username* ** *<span style="color:red">GROUP*git**
    - Email address from step 1
-   - Enter *Password* **acce1gitGROUP**
-3. Add the github account to the **Observer** team
+   - Enter *Password* ** acce1git*<span style="color:red">GROUP* **
+3. Add the github account to the **OSCI-WG/Observer** team
    - If not a team manager, then request from [David Black](dcblack@mac.com)
-4. Subscribe the github account to the *GROUP* e-mail list (e.g. lwg@accellera.org)
+4. Subscribe the github account to the *<span style="color:red">GROUP* e-mail list (e.g. lwg@accellera.org)
 5. Add a mail filter under Preferences
    - [Mail login](https://hostingmail.earthlink.net/ajax_login/login.php)
    - Click **PREFERENCES** tab
@@ -37,7 +40,7 @@ This results in updates from GitHub resulting in the following chain of events:
    - Change the *Rule Name* to 
    - Set **From** **Equal to** **notifications@github.com**
    - Set **Subject** **Contains** **[repository-name]**
-   - Action **FORWARD** *GROUP*@accellera.org
+   - Action **FORWARD *<span style="color:red">GROUP*@accellera.org**
    - Click **SAVE**
    - Click **Sign Out** (Upper-Right corner)
 
